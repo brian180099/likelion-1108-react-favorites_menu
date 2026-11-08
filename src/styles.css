@@ -1,0 +1,560 @@
+:root {
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  color: #302e2b;
+  background: #f8f7f3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #94634a;
+  outline-offset: 5px;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+header {
+  height: 100px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dfded6;
+}
+.logo {
+  font:
+    bold 33px/1 Georgia,
+    serif;
+  letter-spacing: -1.8px;
+}
+.logo > span {
+  color: #a8583f;
+}
+.logo small {
+  display: block;
+  font:
+    8px Arial,
+    sans-serif;
+  letter-spacing: 1.8px;
+  margin-top: 9px;
+}
+nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  font-size: 14px;
+}
+nav a {
+  color: #737168;
+  padding: 10px 0;
+}
+nav a.active {
+  color: #3b4f3f;
+  font-weight: 700;
+}
+nav b {
+  display: inline-grid;
+  place-items: center;
+  min-width: 23px;
+  height: 23px;
+  padding: 0 6px;
+  margin-left: 5px;
+  background: #3b4f3f;
+  border-radius: 50%;
+  color: white;
+  font-size: 11px;
+}
+main {
+  max-width: 1104px;
+  margin: 0 auto;
+  padding: 52px 0 72px;
+  min-height: calc(100vh - 175px);
+}
+.page-intro {
+  padding-bottom: 38px;
+}
+.eyebrow {
+  font:
+    bold 10px Arial,
+    sans-serif;
+  letter-spacing: 2.6px;
+  color: #8c654c;
+  margin-bottom: 15px;
+}
+h1 {
+  font-size: 38px;
+  line-height: 1.35;
+  letter-spacing: -1.9px;
+  font-weight: 650;
+}
+.intro {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #77736d;
+  margin-top: 16px;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 22px;
+  min-height: 38px;
+}
+.section-heading h2 {
+  font-size: 17px;
+  letter-spacing: -0.5px;
+}
+.section-heading h2 span {
+  font-size: 13px;
+  font-weight: 400;
+  color: #8c887d;
+  margin-left: 9px;
+}
+.section-heading p {
+  font-size: 12px;
+  color: #8c887d;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.drink-card {
+  border-radius: 7px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e8e5dc;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.drink-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px #4b3b2410;
+}
+.card-body {
+  padding: 23px;
+}
+.tag {
+  display: inline-block;
+  font:
+    9px Arial,
+    sans-serif;
+  letter-spacing: 1.5px;
+  color: #7a6c59;
+  background: #f1eee6;
+  padding: 6px 8px;
+  border-radius: 3px;
+}
+.card-body h2 {
+  font-size: 21px;
+  letter-spacing: -0.8px;
+  margin: 10px 0 9px;
+}
+.card-body p {
+  font-size: 12px;
+  color: #888079;
+  line-height: 1.9;
+  min-height: 46px;
+  word-break: keep-all;
+}
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid #f0eee8;
+  font-size: 12px;
+}
+.card-bottom strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+.card-bottom span {
+  color: #8b8071;
+}
+/* 외부 이미지 없이 CSS로 그린 세 가지 음료 */
+.drink-art {
+  height: 210px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #eee6d8;
+  --liquid: #49362a;
+  --top: #7e5940;
+  --ice: #ba9a75;
+}
+.drink-art.tea {
+  background: #eee9d8;
+  --liquid: #c78539;
+  --top: #dfad5d;
+  --ice: #f3d49b;
+}
+.drink-art.strawberry {
+  background: #f2e2df;
+  --liquid: #ce797d;
+  --top: #fff2e5;
+  --ice: #f9d9d4;
+}
+.art-orbit {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border: 1px solid #ffffff69;
+  border-radius: 50%;
+  transform: translateX(35px);
+}
+.glass {
+  position: relative;
+  width: 83px;
+  height: 119px;
+  transform: rotate(-7deg);
+  border: 2px solid #ffffffb3;
+  border-top: 5px solid #ffffffe0;
+  border-radius: 5px 5px 19px 19px;
+  background: #ffffff40;
+  box-shadow: inset -9px 0 8px #ffffff40;
+  z-index: 1;
+}
+.glass::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 4px;
+  height: 82px;
+  background: #ffffff70;
+  border-radius: 3px;
+}
+.straw {
+  position: absolute;
+  width: 6px;
+  height: 125px;
+  left: 56px;
+  top: -34px;
+  background: #e8ded0;
+  transform: rotate(12deg);
+  z-index: -1;
+}
+.liquid {
+  position: absolute;
+  inset: 12px 4px 4px;
+  background: linear-gradient(var(--top), var(--liquid) 50%);
+  border-radius: 2px 2px 14px 14px;
+  overflow: hidden;
+}
+.strawberry .liquid {
+  background: linear-gradient(#fff1e6 0 40%, #edc2b9 65%, #c96872);
+}
+.liquid i {
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  width: 24px;
+  height: 20px;
+  border: 1px solid #ffffff59;
+  background: var(--ice);
+  border-radius: 4px;
+  transform: rotate(18deg);
+  opacity: 0.5;
+}
+.liquid i:nth-child(2) {
+  left: 35px;
+  top: 16px;
+  transform: rotate(-17deg);
+}
+.liquid i:nth-child(3) {
+  left: 20px;
+  top: 31px;
+}
+.glass > span {
+  position: absolute;
+  top: 46px;
+  width: 100%;
+  text-align: center;
+  color: #fff9ef;
+  font:
+    italic bold 29px Georgia,
+    serif;
+}
+.glass-shadow {
+  position: absolute;
+  bottom: 32px;
+  width: 102px;
+  height: 12px;
+  background: #664b3520;
+  border-radius: 50%;
+  filter: blur(5px);
+}
+.clear-button {
+  font-size: 12px;
+  border: 1px solid #b8b4a8;
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 5px;
+  color: #615c53;
+}
+.clear-button:hover:enabled {
+  background: #eee9df;
+}
+.clear-button:disabled {
+  border-color: #dedbd3;
+  color: #aaa599;
+}
+.status {
+  color: #48664b;
+  font-size: 13px;
+}
+.status:not(:empty) {
+  padding: 12px 16px;
+  border: 1px solid #d4ddce;
+  background: #edf2e9;
+  margin-bottom: 18px;
+  border-radius: 5px;
+}
+.empty {
+  padding: 45px 20px 50px;
+  border: 1px dashed #d6d1c4;
+  background: #fdfcf9;
+  border-radius: 7px;
+  text-align: center;
+}
+.empty-heart {
+  display: block;
+  color: #a49b8a;
+  font-size: 44px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+.empty h2 {
+  font-size: 21px;
+  letter-spacing: -0.7px;
+}
+.empty p {
+  font-size: 13px;
+  color: #898177;
+  margin: 10px 0 24px;
+}
+.button {
+  display: inline-block;
+  border: 1px solid #3b4f3f;
+  border-radius: 5px;
+  background: #3b4f3f;
+  color: #fff;
+  padding: 12px 21px;
+  font-size: 13px;
+}
+.button:hover {
+  background: #293e2d;
+}
+.button.saved {
+  background: #ebe7df;
+  color: #4a4b3b;
+  border-color: #d5d0c5;
+}
+.back {
+  display: inline-block;
+  font-size: 13px;
+  color: #80796d;
+  margin-bottom: 26px;
+}
+.detail-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: white;
+  border: 1px solid #e8e5dc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.detail-card .drink-art {
+  height: 100%;
+  min-height: 440px;
+}
+.detail-card .glass {
+  transform: scale(1.6) rotate(-7deg);
+}
+.detail-card .art-orbit {
+  width: 300px;
+  height: 300px;
+}
+.detail-card .glass-shadow {
+  bottom: 100px;
+  width: 150px;
+}
+.detail-body {
+  padding: 48px;
+}
+.detail-body h1 {
+  margin: 18px 0;
+  font-size: 36px;
+}
+.description {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #81786d;
+  word-break: keep-all;
+}
+.tasting-note {
+  border-top: 1px solid #eae7df;
+  margin-top: 25px;
+  padding-top: 18px;
+  font-size: 9px;
+  letter-spacing: 1.7px;
+  color: #9b8a73;
+}
+.tasting-note span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0;
+  margin-top: 5px;
+  color: #6f675d;
+}
+.price {
+  display: block;
+  font-size: 22px;
+  margin: 23px 0 20px;
+}
+.detail-body .button {
+  width: 100%;
+}
+.text-link {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 16px;
+  color: #8b8071;
+}
+footer {
+  max-width: 1104px;
+  margin: auto;
+  border-top: 1px solid #dfded6;
+  padding: 23px 0;
+  font:
+    italic 14px Georgia,
+    serif;
+  color: #817c71;
+  display: flex;
+  justify-content: space-between;
+}
+footer span {
+  font:
+    11px "Malgun Gothic",
+    sans-serif;
+  color: #a49d90;
+}
+@media (max-width: 1200px) {
+  main,
+  footer {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  header {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 720px) {
+  header {
+    height: 85px;
+    padding: 0 22px;
+  }
+  .logo {
+    font-size: 29px;
+  }
+  .logo small {
+    font-size: 6px;
+  }
+  nav {
+    gap: 16px;
+    font-size: 12px;
+  }
+  main {
+    padding: 35px 0 45px;
+    margin: 0 22px;
+    min-height: calc(100vh - 160px);
+  }
+  h1 {
+    font-size: 29px;
+    letter-spacing: -1.4px;
+  }
+  .intro {
+    font-size: 13px;
+  }
+  .page-intro {
+    padding-bottom: 28px;
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .section-heading p {
+    display: none;
+  }
+  .card-body {
+    padding: 20px;
+  }
+  .card-body p {
+    min-height: 0;
+  }
+  .detail-card {
+    grid-template-columns: 1fr;
+  }
+  .detail-card .drink-art {
+    min-height: 260px;
+  }
+  .detail-card .glass {
+    transform: scale(1.15) rotate(-7deg);
+  }
+  .detail-card .glass-shadow {
+    bottom: 48px;
+  }
+  .detail-body {
+    padding: 28px;
+  }
+  .detail-body h1 {
+    font-size: 30px;
+  }
+  footer {
+    margin: 0 22px;
+    padding: 20px 0;
+  }
+  .empty {
+    padding: 35px 15px;
+  }
+  .empty h2 {
+    font-size: 19px;
+  }
+  .empty p {
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
