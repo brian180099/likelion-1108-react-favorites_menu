@@ -1,5 +1,5 @@
 {
-  "name": "likelion-react-favorites",
+  "name": "1102session",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,21 +7,19 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview",
-    "test:e2e": "playwright test"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-router": "^8.5.1",
-    "zustand": "^5.1.0"
+    "zustand": "^5.0.16"
   },
   "devDependencies": {
-    "@playwright/test": "^1.65.0",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
-    "oxlint": "^1.90.0",
-    "vite": "^8.3.6"
+    "oxlint": "^1.89.0",
+    "vite": "^8.3.5"
   }
 }
